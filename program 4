@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class A {
+    protected:
+        int i;
+    public:
+        void printNum() { cout << "i = " << i << endl; }
+};
+
+class B : public A {
+    private:
+        int j;
+    public:
+        void printNum() { cout << "j = " << j << endl; }
+        void setValues(int x, int y) { i = x; j = y; }
+};
+
+int main() {
+    B obj;
+    obj.setValues(2, 3);
+    obj.printNum(); 
+    return 0;
+}
