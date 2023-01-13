@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Programming {
+    private:
+        string language;
+    public:
+       
+        Programming(string lang = "") {
+            language = lang;
+            if (language.empty())
+                cout << "I love programming languages" << endl;
+            else
+                cout << "I love " << language << endl;
+        }
+};
+
+int main() {
+    Programming p1; 
+    Programming p2("C++"); 
+    Programming p3("Java"); 
+    return 0;
+}
