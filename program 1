@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+class rec {
+    private:
+        int length, breadth;
+    public:
+        
+        rec() { length = 0; breadth = 0; }
+        rec(int l, int b) { length = l; breadth = b; }
+        rec(int l) { length = breadth = l; }
+
+        
+        int area() { return length * breadth; }
+};
+
+int main() {
+    rec r1;
+    rec r2(5);
+    rec r3(4,5);
+
+    cout<<r1.area()<<endl; 
+    cout<<r2.area()<<endl; 
+    cout<<r3.area()<<endl; 
+    return 0;
+}
